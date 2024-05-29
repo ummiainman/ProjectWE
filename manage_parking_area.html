@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Parking Area</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo">
+            <h2>FKPark</h2>
+        </div>
+        <a href="admin_dashboard.html" class="sidebar-btn">Dashboard</a>
+        <a href="manage_user_profile.html" class="sidebar-btn">Manage User Profile</a>
+        <a href="manage_vehicle_information.html" class="sidebar-btn">Manage Vehicle Information</a>
+        <a href="manage_parking_space.html" class="sidebar-btn">Manage Parking Spaces</a>
+        <a href="manage_parking_area.html" class="sidebar-btn">Manage Temporary Closures</a>
+        <a href="view_daily_parking.html" class="sidebar-btn">View Parking Availability</a>
+        <a href="booking_parking_space.html" class="sidebar-btn">Booking Parking Space</a>
+        <a href="logout.html" class="sidebar-btn">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Manage Parking Area</h1>
+        <div id="closureForm">
+            <form id="createClosureForm">
+                <label for="parkingSpaceId">Parking Space ID:</label>
+                <input type="number" id="parkingSpaceId" name="parkingSpaceId" required>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+                <label for="reason">Reason:</label>
+                <input type="text" id="reason" name="reason" required>
+                <button type="submit">Create Closure</button>
+            </form>
+        </div>
+    </div>
+        <div id="closuresList"></div>
+    </div>
+    <script src="manage_parking_area.js"></script>
+</body>
+</html>
