@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FKPark Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="main-content-wrapper">
+            <div id="main-content">
+                <div class="login-container">
+                    <div class="logo">
+                        <img src="logo.jpeg" alt="Logo">
+                    </div>
+                    <h2>FKPark Login</h2>
+                    <form name="loginForm" action="login.php" onsubmit="return validateLoginForm()" method="post">
+                        <input type="text" name="username" placeholder="Username" class="form-control" required>
+                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+						<select name="role" class="form-control" required>
+							<option value="Student">Student</option>
+                            <option value="Staff">Staff</option>
+							<option value="Administrator">Administrator</option>
+                        </select>
+                        <input type="submit" value="Login" class="btn-submit">
+                    </form>
+                    <p>Don't have an account? <a href="register.html">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

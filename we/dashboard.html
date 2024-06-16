@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="admin dash.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo">
+                <h2>FKPark</h2>
+            </div>
+            <a href="dashboard.html" class="sidebar-btn">Dashboard</a>
+            <a href="register vehicle.html" class="sidebar-btn">Manage Vehicle Information</a>
+            <a href="view_daily_parking.html" class="sidebar-btn">View Parking Availability</a>
+            <a href="booking_parking_space.html" class="sidebar-btn">Booking Parking Space</a>
+            <a href="update profile.html" class="sidebar-btn">Update Profile</a>
+            <a href="logout.html" class="sidebar-btn">Logout</a>
+        </div>
+        <div class="main-content">
+            <header>
+                <h1>Dashboard</h1>
+            </header>
+            <section class="overview">
+                <h2>Overview</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Parking Space Number</th>
+                            <th>Area</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be inserted here -->
+                    </tbody>
+                </table>
+                <div class="actions">
+                    <button class="action-btn">View</button>
+                    <button class="action-btn">Cancel</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="student_dashboard.js"></script>
+</body>
+</html>

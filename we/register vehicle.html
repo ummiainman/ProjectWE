@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="register vehicle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo">
+                <h2>FKPark</h2>
+            </div>
+            <a href="dashboard.html" class="sidebar-btn">Dashboard</a>
+            <a href="register vehicle.html" class="sidebar-btn">Manage Vehicle Information</a>
+            <a href="view_daily_parking.html" class="sidebar-btn">View Parking Availability</a>
+            <a href="booking_parking_space.html" class="sidebar-btn">Booking Parking Space</a>
+            <a href="update profile.html" class="sidebar-btn">Update Profile</a>
+            <a href="logout.html" class="sidebar-btn">Logout</a>
+        </div>
+        <div class="main-content">
+            <header>
+                <h1>Vehicle Registration</h1>
+            </header>
+            <section class="registration-form">
+                <form name="vehicleRegistrationForm" action="vehicle_register.php" onsubmit="return validateVehicleRegistrationForm()" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="vehicle_number">Vehicle Registration Number</label>
+                        <input type="text" id="vehicle_number" name="vehicle_number" placeholder="Vehicle Number" class="form-control" required>
+                    </div>
+					<div class="form-group">
+                        <label for="vehicle_type">Vehicle Type</label>
+                        <select id="vehicle_type" name="vehicle_type" class="form-control" required>
+                            <option value="car">Car</option>
+                            <option value="motorcycle">Motorcycle</option>
+                        </select>
+                    </div>
+					<div class="form-group">
+                        <label for="vehicle_color">Vehicle Color</label>
+                        <input type="text" id="vehicle_color" name="vehicle_color" placeholder="Vehicle Color" class="form-control" required>
+                    </div>
+					<div class="form-group">
+                        <label for="vehicle_brand">Vehicle Brand</label>
+                        <input type="text" id="vehicle_brand" name="vehicle_brand" placeholder="Vehicle brand" class="form-control" required>
+                    </div>
+					<div class="form-group">
+                        <label for="date">Roadtax Valid Date:</label>
+						<input type="date" id="date" name="date" class="form-control" required>
+                    </div>
+					<div class="form-group">
+                        <label for="date">Driving Licence's Valid Date:</label>
+						<input type="date" id="date" name="date" class="form-control" required>
+                    </div>
+					
+                    <div class="form-group">
+                        <label for="vehicle_grant">Upload Vehicle Grant</label>
+                        <input type="file" id="vehicle_grant" name="vehicle_grant" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Register Vehicle" class="btn-submit">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+

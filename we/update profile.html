@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="update profile.css">
+    <script src="update profile.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo">
+                <h2>FKPark</h2>
+            </div>
+            <a href="dashboard.html" class="sidebar-btn">Dashboard</a>
+            <a href="register vehicle.html" class="sidebar-btn">Manage Vehicle Information</a>
+            <a href="view parking.html" class="sidebar-btn">View Parking Availability</a>
+            <a href="book parking.html" class="sidebar-btn">Booking Parking Space</a>
+            <a href="update profile.html" class="sidebar-btn">Update Profile</a>
+            <a href="logout.html" class="sidebar-btn">Logout</a>
+        </div>
+        <div class="main-content">
+            <header>
+                <h1>Update Profile</h1>
+            </header>
+            <section class="profile-update">
+                <h2>Edit Your Profile Information</h2>
+                <form name="updateProfileForm" action="update_profile.php" onsubmit="return validateProfileForm()" method="post">
+                    <input type="text" name="fullname" placeholder="Fullname" class="form-control" required>
+                    <input type="text" name="Matric ID" placeholder="Matric ID" class="form-control" required>
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+					<div class="form-group">
+                        <input type="text" id="number_phone" name="number_phone" placeholder="Phone Number" class="form-control" required>
+                    </div>
+					<div class="form-group">
+                        <input type="text" id="address" name="address" placeholder="Address" class="form-control" required>
+                    </div>
+					
+                    <input type="submit" value="Update Profile" class="btn-submit">
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

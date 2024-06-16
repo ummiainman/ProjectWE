@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin dash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo">
+                <h2>FKPark</h2>
+            </div>
+            <a href="admin dash.html" class="sidebar-btn">Dashboard</a>
+            <a href="manage_parking_spaces.html" class="sidebar-btn">Manage Parking Spaces</a>
+            <a href="view_parking_usage.html" class="sidebar-btn">View Parking Usage</a>
+            <a href="logout.html" class="sidebar-btn">Logout</a>
+        </div>
+        <div class="main-content">
+            <header>
+                <h1>Admin Dashboard</h1>
+            </header>
+            <section class="overview">
+                <h2>Parking Space Management</h2>
+                <form action="update_parking_spaces.php" method="post">
+                    <label for="staffSpaces">Staff Parking Spaces:</label>
+                    <input type="number" id="staffSpaces" name="staffSpaces" min="0" required>
+                    <label for="studentSpaces">Student Parking Spaces:</label>
+                    <input type="number" id="studentSpaces" name="studentSpaces" min="0" required>
+                    <input type="submit" value="Update">
+                </form>
+            </section>
+            <section class="chart-section">
+                <h2>Parking Usage</h2>
+                <canvas id="parking-usage-chart"></canvas>
+                <script>
+                    var ctx = document.getElementById('parking-usage-chart').getContext('2d');
+                    var chart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Staff', 'Students'],
+                            datasets: [{
+                                label: 'Parking Usage',
+                                data: [120, 80], // Example data
+                                backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+                                borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)'],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

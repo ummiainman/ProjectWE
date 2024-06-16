@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View and Edit Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="profile.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo">
+                <h2>FKPark</h2>
+            </div>
+            <a href="dashboard.html" class="sidebar-btn">Dashboard</a>
+            <a href="register_vehicle.html" class="sidebar-btn">Manage Vehicle Information</a>
+            <a href="view_parking.html" class="sidebar-btn">View Parking Availability</a>
+            <a href="book_parking.html" class="sidebar-btn">Booking Parking Space</a>
+            <a href="profile.html" class="sidebar-btn">Update Profile</a>
+            <a href="logout.html" class="sidebar-btn">Logout</a>
+        </div>
+        <div class="main-content">
+            <header>
+                <h1>Profile</h1>
+            </header>
+            <section class="profile">
+                <h2>Your Profile Information</h2>
+                <form name="profileForm" action="update_profile.php" onsubmit="return validateProfileForm()" method="post">
+                    <label for="fullname">Fullname:</label>
+                    <input type="text" id="fullname" name="fullname" class="form-control" required>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role" class="form-control" readonly>
+
+                    <h3>Vehicle Information</h3>
+                    <div id="vehicle-info">
+                        <!-- Vehicle information will be populated here by JavaScript -->
+                    </div>
+
+                    <input type="submit" value="Update Profile" class="btn-submit">
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
